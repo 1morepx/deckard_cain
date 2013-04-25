@@ -4,10 +4,10 @@ require 'deckard_cain/hero'
 
 class HeroTest   < Test::Unit::TestCase
   def test_gender_mutator
-    male = Hero.new
+    male = DeckardCain::Hero.new
     male.gender = 0
 
-    female = Hero.new
+    female = DeckardCain::Hero.new
     female.gender = 1
 
     assert_equal male.gender   , :male
@@ -15,7 +15,7 @@ class HeroTest   < Test::Unit::TestCase
   end
 
   def test_last_updated_mutator
-    hero = Hero.new
+    hero = DeckardCain::Hero.new
     hero.last_updated = 1365373956
 
     assert_equal hero.last_updated.year   , 2013
@@ -27,7 +27,7 @@ class HeroTest   < Test::Unit::TestCase
   end
 
   def test_class_converts_to_symbol
-    hero = Hero.new
+    hero = DeckardCain::Hero.new
     hero.class = "demon-hunter"
 
     assert_equal hero.class , :demon_hunter

@@ -1,6 +1,6 @@
 require 'date'
 
-class Hero
+class DeckardCain::Hero
 
   attr_accessor :name, :id, :level, :gender, :hardcore, :last_updated, :dead, :paragon_level, :class
 
