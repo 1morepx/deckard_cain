@@ -11,4 +11,5 @@ Gem::Specification.new do |s|
   s.email         = 'dave@1morepx.com'
   s.files         = ["lib/deckard_cain.rb"]
   s.homepage      = 'http://rubygems.org/gems/deckard_cain'
+  s.add_development_dependency 'rspec', '~> 2.14'
 end
