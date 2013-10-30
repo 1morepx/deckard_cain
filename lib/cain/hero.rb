@@ -1,5 +1,5 @@
 require 'date'
-require 'model'
+require 'cain/model'
 
 module Cain
   class Hero < Model
