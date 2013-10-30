@@ -1,9 +1,9 @@
 $:.push File.expand_path("../lib", __FILE__)
-require "deckard_cain/version"
+require "cain/version"
 
 Gem::Specification.new do |s|
   s.name          = 'deckard_cain'
-  s.version       = DeckardCain::VERSION
+  s.version       = Cain::VERSION
   s.date          = '2013-04-24'
   s.summary       = 'Stay a while and listen!'
   s.description   = 'Deckard cain knows everything about the Diablo 3 Community API'
