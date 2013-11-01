@@ -4,7 +4,7 @@ require 'cain/model'
 module Cain
   class Hero < Model
 
-    attr_accessor :name, :id, :level, :gender, :hardcore, :last_updated, :dead, :paragon_level, :class
+    attr_accessor :name, :id, :level, :gender, :hardcore, :last_updated, :dead, :paragon_level, :character_class
 
     def gender= value
       @gender = value.zero? ? :male : :female
@@ -14,9 +14,9 @@ module Cain
       @last_updated = epoch_to_date value
     end
 
-    def class= value
+    def character_class= value
       value = value.gsub(/-/, '_')
-      @class = value.to_sym
+      @character_class = value.to_sym
     end
   end
 end

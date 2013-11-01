@@ -3,7 +3,7 @@ require 'cain/hero'
 
 module Cain
   describe Hero do
-    context 'gender' do
+    context '#gender' do
       it 'is male' do
         subject.gender = 0
 
@@ -22,22 +22,20 @@ module Cain
         subject.last_updated = 1365373956
 
         subject.last_updated.year.should eq 2013
-
-        # assert_equal hero.last_updated.year   , 2013
-        # assert_equal hero.last_updated.month  , 4
-        # assert_equal hero.last_updated.day    , 7
-        # assert_equal hero.last_updated.hour   , 22
-        # assert_equal hero.last_updated.minute , 32
-        # assert_equal hero.last_updated.second , 36
+        subject.last_updated.month.should eq 4
+        subject.last_updated.day.should eq 7
+        subject.last_updated.hour.should eq 22
+        subject.last_updated.minute.should eq 32
+        subject.last_updated.second.should eq 36
       end
     end
 
+    context '#character_class' do
+      it 'represents classes as symbols' do
+        subject.character_class = "demon-hunter"
 
-    # def test_class_converts_to_symbol
-    #   hero = DeckardCain::Hero.new
-    #   hero.class = "demon-hunter"
-
-    #   assert_equal hero.class , :demon_hunter
-    # end
+        subject.character_class.should eq :demon_hunter
+      end
+    end
   end
 end
