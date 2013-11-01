@@ -4,7 +4,7 @@ require 'cain/model'
 module Cain
   class Hero < Model
 
-    attr_accessor :name, :id, :level, :gender, :hardcore, :last_updated, :dead, :paragon_level, :character_class
+    attr_accessor :name, :id, :level, :gender, :hardcore, :dead, :paragon_level, :character_class
 
     def gender= value
       @gender = value.zero? ? :male : :female
