@@ -7,7 +7,7 @@ describe DeckardCain do
 
   context "career" do
     let(:battle_tag) { "Daegren-1581" }
-    it 'fetches a career given a battle tag' do
+    it 'creates a career object with the proper battle tag' do
       career = DeckardCain.fetch_career battle_tag
 
       career.battle_tag.should eq battle_tag
