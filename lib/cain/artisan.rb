@@ -1,6 +1,6 @@
 require 'cain/model'
 
 module Cain
-  class Artisan
+  class Artisan < Model
   end
 end
