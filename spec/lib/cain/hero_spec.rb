@@ -3,6 +3,8 @@ require 'cain/hero'
 
 module Cain
   describe Hero do
+    let(:battle_tag) { "Daegren-1581" }
+    subject { described_class.new battle_tag }
     context '#gender' do
       it 'is male' do
         subject.gender = 0
@@ -22,6 +24,17 @@ module Cain
         subject.character_class = "demon-hunter"
 
         subject.character_class.should eq :demon_hunter
+      end
+    end
+
+    context '#path' do
+      before do
+        subject.id = hero_id
+      end
+      let(:hero_id) { 5 }
+
+      it 'path is correct for the resource' do
+        subject.path.should == "http://us.battle.net/api/d3/profile/#{battle_tag}/hero/#{hero_id}"
       end
     end
   end

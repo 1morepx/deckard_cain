@@ -14,5 +14,10 @@ module Cain
       value = value.gsub(/-/, '_')
       @character_class = value.to_sym
     end
+
+  protected
+    def resource_path
+      "profile/#{battle_tag}/hero/#{id}"
+    end
   end
 end

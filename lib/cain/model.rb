@@ -1,7 +1,10 @@
 module Cain
   class Model
 
-    attr_accessor :last_updated
+    attr_accessor :last_updated, :battle_tag
+    def initialize battle_tag=nil
+      @battle_tag = battle_tag
+    end
 
     def last_updated= timestamp
       @last_updated = epoch_to_date timestamp
