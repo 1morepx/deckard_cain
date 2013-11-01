@@ -10,10 +10,6 @@ module Cain
       @gender = value.zero? ? :male : :female
     end
 
-    def last_updated= value
-      @last_updated = epoch_to_date value
-    end
-
     def character_class= value
       value = value.gsub(/-/, '_')
       @character_class = value.to_sym
