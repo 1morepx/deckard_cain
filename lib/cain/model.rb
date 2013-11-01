@@ -1,6 +1,7 @@
 module Cain
   class Model
-    private
+
+  private
 
     def epoch_to_date timestamp
       DateTime.strptime("#{timestamp}", '%s')
