@@ -12,4 +12,5 @@ Gem::Specification.new do |s|
   s.files         = ["lib/deckard_cain.rb"]
   s.homepage      = 'http://github.com/1morepx/deckard_cain'
   s.add_development_dependency 'rspec', '~> 2.14'
+  s.add_development_dependency 'coveralls', '~> 0.7'
 end
