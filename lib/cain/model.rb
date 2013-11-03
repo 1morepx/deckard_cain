@@ -20,9 +20,7 @@ module Cain
       DateTime.strptime("#{timestamp}", '%s')
     end
 
-    def resource_path
-      ""
-    end
+    def resource_path; end
 
   private
 
