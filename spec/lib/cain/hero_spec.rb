@@ -2,9 +2,13 @@ require 'spec_helper'
 require 'cain/hero'
 
 module Cain
-  describe Hero do
+  describe Hero, :vcr do
     let(:battle_tag) { "Daegren-1581" }
     subject { described_class.new battle_tag }
+    before do
+      subject.id = 3691256
+    end
+
     context '#gender' do
       it 'is male' do
         subject.gender = 0

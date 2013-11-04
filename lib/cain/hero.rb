@@ -4,6 +4,18 @@ require 'cain/model'
 module Cain
   class Hero < Model
 
+    def self.build_from_json params
+      hero = new
+
+      params.keys.each do |key|
+        method = key.gsub(/([a-z\d])([A-Z])/,'\1_\2').tr("-", "_").downcase
+        method = "character_class" if method == "class"
+        hero.send(method + "=", params[key])
+      end
+
+      hero
+    end
+
     attr_accessor :name, :id, :level, :gender, :hardcore, :dead, :paragon_level, :character_class
 
     def gender= value
